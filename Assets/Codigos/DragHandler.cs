@@ -18,18 +18,21 @@ public class DragHandler : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("OnBeginDrag");
-        itemDragging = gameObject;
+    Debug.Log("OnBeginDrag");
+    itemDragging = gameObject;
 
-        startPosition = transform.position;
-        startParent = transform.parent;
-        transform.SetParent(dragParent);
+    startPosition = transform.position;
+    startParent = transform.parent;
+    
+    transform.SetParent(dragParent);
+    
+    // Esto es lo que evita que desaparezca visualmente al arrastrar
+    transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("OnDrag");
-        // Usamos Input.mousePosition que es el que te funcionaba fluidamente para arrastrar
         transform.position = Input.mousePosition;
     }
 

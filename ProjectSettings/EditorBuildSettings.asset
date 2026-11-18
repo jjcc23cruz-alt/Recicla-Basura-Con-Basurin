@@ -14,4 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScanearYJugar.unity
     guid: 2bec85209b646724caba5f1facd30bb8
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 1ffd6b0d758b2654698cc5e85965324b
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 11206654052da0f4087c68b3eb22d151, type: 2}
